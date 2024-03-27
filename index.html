@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color List</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="main-container">
+    <div class="header-area">
+      <h2>COLOR PALETTE</h2>
+      <!--검색창-->
+      <div id="search-container">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Color Name/Number">
+          <button id="search-button">검색</button>
+        </div>
+        <p>컬러넘버 : SH S 2020-B30G 페이지번호 : 0090C | 컬러네임(영문/한글) : Canal City / 커넬 시티</p>
+      </div>
+      <!--검색창-->
+    </div>
+    <div id="category-filter">
+
+      <label for="best-checkbox" class="check-box">BEST
+          <input type="checkbox" id="best-checkbox" value="BEST">
+          <span class="checkmark"></span>
+      </label>
+      <label for="all-checkbox" class="check-box">ALL
+        <input type="checkbox" id="all-checkbox" value="ALL" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label for="black-checkbox" class="check-box">Black
+        <input type="checkbox" id="black-checkbox" value="Black">
+        <span class="checkmark"></span>
+      </label>
+      <label for="blue-checkbox" class="check-box">Blue
+        <input type="checkbox" id="blue-checkbox" value="Blue">
+        <span class="checkmark"></span>
+      </label>
+      <label for="bg-checkbox" class="check-box">Blue Green
+        <input type="checkbox" id="bg-checkbox" value="Blue Green">
+        <span class="checkmark"></span>
+      </label>
+      <label for="gray-checkbox" class="check-box">Gray
+        <input type="checkbox" id="gray-checkbox" value="Gray">
+        <span class="checkmark"></span>
+      </label>
+      <label for="green-checkbox" class="check-box">Green
+        <input type="checkbox" id="green-checkbox" value="Green">
+        <span class="checkmark"></span>
+      </label>
+      <label for="gy-checkbox" class="check-box">Green Yellow
+        <input type="checkbox" id="gy-checkbox" value="Green Yellow">
+        <span class="checkmark"></span>
+      </label>
+      <label for="orange-checkbox" class="check-box">Orange
+        <input type="checkbox" id="orange-checkbox" value="Orange">
+        <span class="checkmark"></span>
+      </label>
+      <label for="purple-checkbox" class="check-box">Purple
+        <input type="checkbox" id="purple-checkbox" value="Purple">
+        <span class="checkmark"></span>
+      </label>
+      <label for="red-checkbox" class="check-box">Red
+        <input type="checkbox" id="red-checkbox" value="Red">
+        <span class="checkmark"></span>
+      </label>
+      <label for="white-checkbox" class="check-box">White
+        <input type="checkbox" id="white-checkbox" value="White">
+        <span class="checkmark"></span>
+      </label>
+      <label for="yellow-checkbox" class="check-box">Yellow
+        <input type="checkbox" id="yellow-checkbox" value="Yellow">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <div class="color-list-area">
+      <div id="color-list"></div>
+      <p>*모니터 해상도에 따라 실제 컬러와 차이가 있을 수 있음</p>
+    </div>
+    <div class="color-detail-area">
+      <div class="detail-box">
+        <div class="detail-color" style="background-color:#eee"></div>
+        <div class="detail-info">
+          <b>Color Name</b>
+          <input type="text" value="Color Code" readonly="readonly">
+          <button class="btn-copy">Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="color-recent-area">
+      <h3>최근 본 컬러</h3>
+      <ul>
+        <li>
+          <div class="detail-box">
+            <div class="detail-color" style="background-color:#eee"></div>
+            <div class="detail-info">
+              <b>Color Name</b>
+              <input type="text" value="Color Code" readonly="readonly">
+              <button class="btn-copy">Copy</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="detail-box">
+            <div class="detail-color" style="background-color:#eee"></div>
+            <div class="detail-info">
+              <b>Color Name</b>
+              <input type="text" value="Color Code" readonly="readonly">
+              <button class="btn-copy">Copy</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div id="color-recent"></div>
+    </div>
+    <div class="color-calc">
+      <h3>페인트 소요량 계산</h3>
+      <div class="calc-body">
+        <img src="./images/calc.png" alt="">
+        <div class="form">
+          <form onsubmit="return false">
+            <div>
+              <input type="text" id="calc_input01" placeholder="가로">
+              <b>m</b>
+            </div>
+            <span>X</span>
+            <div>
+              <input type="text" id="calc_input02" placeholder="세로">
+              <b>m</b>
+            </div>
+            <button type="button">검색</button>
+          </form>
+          <div class="calc-result">
+            <div>
+              공간면적 <span id="calc_result01">0</span> m² 이며,
+            </div>
+            <div>
+              필요한 페인트양은 <span id="calc_result02">0</span> L(리터)
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <ul class="calc-info">
+        <li>기본적으로 2회 페인팅 기준으로 산출되며 최소 계산량은 0.1L입니다.</li>
+        <li>칠하는 표면의 상태, 사용자의 작업 방법에 따라 차이가 있을 수 있습니다.</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+</body>
+<script src="js/scripts.js"></script>
+</html>
+

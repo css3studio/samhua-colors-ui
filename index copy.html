@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color List</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+</style>
+</head>
+<body>
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="색상 검색">
+  <button id="search-button">검색</button>
+</div>
+<div id="category-filter">
+
+    <label for="all-checkbox" class="check-box">ALL
+        <input type="checkbox" id="all-checkbox" value="ALL" checked="checked">
+        <span class="checkmark"></span>
+    </label>
+    <label for="primary-checkbox" class="check-box">Primary
+        <input type="checkbox" id="primary-checkbox" value="Primary">
+        <span class="checkmark"></span>
+    </label>
+    <label for="secondary-checkbox" class="check-box">Secondary
+        <input type="checkbox" id="secondary-checkbox" value="Secondary">
+        <span class="checkmark"></span>
+    </label>
+
+    <!--
+    <input type="checkbox" id="warm-checkbox" value="Warm">
+    <label for="warm-checkbox">Warm</label>
+    <input type="checkbox" id="cool-checkbox" value="Cool">
+    <label for="cool-checkbox">Cool</label>
+    <input type="checkbox" id="neutral-checkbox" value="Neutral">
+    <label for="neutral-checkbox">Neutral</label>
+    -->
+</div>
+<div id="color-list"></div>
+<div id="color-detail"></div>
+<div id="color-recent"></div>
+
+</body>
+<script src="js/scripts.js"></script>
+</html>
+
