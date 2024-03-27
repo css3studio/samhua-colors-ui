@@ -13,10 +13,10 @@
       <h2>COLOR PALETTE</h2>
       <!--검색창-->
       <div id="search-container">
-        <div class="search-box">
+        <form id="form-search" class="search-box">
           <input type="text" id="search-input" placeholder="Color Name/Number">
           <button id="search-button">검색</button>
-        </div>
+        </form>
         <p>컬러넘버 : SH S 2020-B30G 페이지번호 : 0090C | 컬러네임(영문/한글) : Canal City / 커넬 시티</p>
       </div>
       <!--검색창-->
@@ -122,7 +122,7 @@
       <div class="calc-body">
         <img src="./images/calc.png" alt="">
         <div class="form">
-          <form onsubmit="return false">
+          <form id="form_calc">
             <div>
               <input type="text" id="calc_input01" placeholder="가로">
               <b>m</b>
@@ -132,7 +132,7 @@
               <input type="text" id="calc_input02" placeholder="세로">
               <b>m</b>
             </div>
-            <button type="button">검색</button>
+            <button>검색</button>
           </form>
           <div class="calc-result">
             <div>

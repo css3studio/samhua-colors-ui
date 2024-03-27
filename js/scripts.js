@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var colorDetailDiv = document.getElementById("color-detail");
     var colorRecentDiv = document.getElementById("color-recent");
     var searchInput = document.getElementById("search-input");
-    var searchButton = document.getElementById("search-button");
+    var searchForm = document.getElementById("form-search");
     var categoryCheckboxes = document.querySelectorAll("#category-filter input[type='checkbox']");
     var allCheckbox = document.getElementById("all-checkbox");
     var selectedColors = []; // 최근 선택한 색상 정보를 저장할 배열
@@ -81,7 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
-    searchButton.addEventListener('click', function(){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
       categoryCheckboxes.forEach(function(cb) {
           cb.checked = false;
       });
@@ -130,5 +131,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         return null;
     }
+
+    document.getElementById("form_calc").addEventListener('submit', function(e){
+      var width = document.getElementById("calc_input01").value;
+      var height = document.getElementById("calc_input02").value;
+      var area = parseFloat(width) * parseFloat(height);
+      var paint = area * 0.2;
+      document.getElementById("calc_result01").innerHTML = parseFloat(area.toFixed(2));
+      document.getElementById("calc_result02").innerHTML = parseFloat(paint.toFixed(2));
+      e.preventDefault();
+    });
 
   });
