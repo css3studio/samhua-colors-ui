@@ -124,12 +124,12 @@
         <div class="form">
           <form id="form_calc">
             <div>
-              <input type="text" id="calc_input01" placeholder="가로" required="required">
+              <input type="text" id="calc_input01" placeholder="가로" required="required" onKeyup="this.value=this.value.replace(/[^-\.0-9]/g,'');">
               <b>m</b>
             </div>
             <span>X</span>
             <div>
-              <input type="text" id="calc_input02" placeholder="세로" required="required">
+              <input type="text" id="calc_input02" placeholder="세로" required="required" onKeyup="this.value=this.value.replace(/[^-\.0-9]/g,'');">
               <b>m</b>
             </div>
             <button>검색</button>
