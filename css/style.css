@@ -203,6 +203,7 @@ a:hover, a:active {
   border: 1px solid #D9D9D9;
   height:7.5rem;
   display:flex;
+  overflow:hidden;
 }
 .detail-box .detail-color{
   width:65%;
@@ -215,12 +216,17 @@ a:hover, a:active {
 .detail-box .detail-info b{
   display:block;
 }
-.detail-box .detail-info input{
+.detail-box .detail-info span{
   display:block;
-  border:none;
   font-size:0.875rem;
   margin-bottom:1rem;
-  width:100%;
+}
+.detail-box .detail-info input{
+  width:1px;
+  height:1px;
+  border:none;
+  position:absolute;
+  top:-300px;
 }
 .color-detail-area .detail-box.reset .detail-info{
   visibility: hidden;

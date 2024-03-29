@@ -72,13 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
       var detail_box = document.querySelectorAll(".detail-box");
       var color_hex = document.querySelectorAll(".detail-color");
       var color_name = document.querySelectorAll(".detail-info b");
-      var color_code = document.querySelectorAll(".detail-info input");
+      var color_code = document.querySelectorAll(".detail-info span");
+      var color_code_copy = document.querySelectorAll(".detail-info input");
       var i = 0;
       selectedColors.forEach(function(selectedColor) {
         if(detail_box[i].classList.contains('reset')) detail_box[i].classList.remove('reset');
         color_hex[i].style.backgroundColor = selectedColor.hex;
         color_name[i].innerHTML = selectedColor.eng;
-        color_code[i].value = selectedColor.code;
+        color_code[i].innerHTML = selectedColor.code + ' (' + selectedColor.page + ')';
+        color_code_copy[i].value = selectedColor.code;
         i++;
       });
     }
@@ -138,9 +140,9 @@ document.addEventListener("DOMContentLoaded", function() {
       var width = document.getElementById("calc_input01").value;
       var height = document.getElementById("calc_input02").value;
       var area = parseFloat(width) * parseFloat(height);
-      var paint = area * 0.2;
-      document.getElementById("calc_result01").innerHTML = parseFloat(area.toFixed(2));
-      document.getElementById("calc_result02").innerHTML = parseFloat(paint.toFixed(2));
+      var paint = area / 6;
+      document.getElementById("calc_result01").innerHTML = parseFloat(area.toFixed(1));
+      document.getElementById("calc_result02").innerHTML = parseFloat(paint.toFixed(1));
       e.preventDefault();
     });
 
