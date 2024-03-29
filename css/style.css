@@ -222,6 +222,9 @@ a:hover, a:active {
   margin-bottom:1rem;
   width:100%;
 }
+.color-detail-area .detail-box.reset .detail-info{
+  visibility: hidden;
+}
 .btn-copy{
   display:inline-block;
   font-size:0.75rem;
@@ -239,9 +242,24 @@ a:hover, a:active {
 .color-recent-area{
   margin-bottom:3rem;
 }
-.color-recent-area h3{
-  font-size:1.5rem;
+.color-recent-area .titles{
+  display:flex;
+  justify-content: space-between;
   margin-bottom:1.5rem;
+}
+.color-recent-area .titles h3{
+  font-size:1.5rem;
+  
+}
+.color-recent-area .titles button{
+  font-size:0.75rem;
+  cursor: pointer;
+  background-color:transparent;
+  border:none;
+  background: url('../images/reset.png') no-repeat right center;
+  background-size:0.75rem;
+  padding-right:1rem;
+  color:#434343;
 }
 .color-recent-area ul{
   display:flex;
@@ -254,7 +272,9 @@ a:hover, a:active {
 .color-recent-area .detail-box .detail-color{
   width:7.5rem;
 }
-
+.color-recent-area .detail-box.reset{
+  visibility: hidden;
+}
 /**/
 .color-calc h3{
   font-size:1.5rem;

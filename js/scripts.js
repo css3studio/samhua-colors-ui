@@ -69,11 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedColors.pop();
       }
       // 최근 선택한 색상의 상세 정보 표시
+      var detail_box = document.querySelectorAll(".detail-box");
       var color_hex = document.querySelectorAll(".detail-color");
       var color_name = document.querySelectorAll(".detail-info b");
       var color_code = document.querySelectorAll(".detail-info input");
       var i = 0;
       selectedColors.forEach(function(selectedColor) {
+        if(detail_box[i].classList.contains('reset')) detail_box[i].classList.remove('reset');
         color_hex[i].style.backgroundColor = selectedColor.hex;
         color_name[i].innerHTML = selectedColor.eng;
         color_code[i].value = selectedColor.code;
@@ -140,6 +142,14 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("calc_result01").innerHTML = parseFloat(area.toFixed(2));
       document.getElementById("calc_result02").innerHTML = parseFloat(paint.toFixed(2));
       e.preventDefault();
+    });
+
+    document.getElementById("btn-reset").addEventListener('click', function(e){
+      var detail_box = document.querySelectorAll(".detail-box");
+      selectedColors.pop();
+      selectedColors.pop();
+      detail_box[1].classList.add('reset');
+      detail_box[2].classList.add('reset');
     });
 
   });

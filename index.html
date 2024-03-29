@@ -14,7 +14,7 @@
       <!--검색창-->
       <div id="search-container">
         <form id="form-search" class="search-box">
-          <input type="text" id="search-input" placeholder="Color Name/Number" required="required">
+          <input type="text" id="search-input" placeholder="Color Name/Number">
           <button id="search-button">검색</button>
         </form>
         <p>컬러넘버 : SH S 2020-B30G 페이지번호 : 0090C | 컬러네임(영문/한글) : Canal City / 커넬 시티</p>
@@ -82,7 +82,7 @@
       <p>*모니터 해상도에 따라 실제 컬러와 차이가 있을 수 있음</p>
     </div>
     <div class="color-detail-area">
-      <div class="detail-box">
+      <div class="detail-box reset">
         <div class="detail-color" style="background-color:#eee"></div>
         <div class="detail-info">
           <b>Color Name</b>
@@ -92,10 +92,13 @@
       </div>
     </div>
     <div class="color-recent-area">
-      <h3>최근 본 컬러</h3>
+      <div class="titles">
+        <h3>최근 본 컬러</h3>
+        <button id="btn-reset">Reset</button>
+      </div>
       <ul>
         <li>
-          <div class="detail-box">
+          <div class="detail-box reset">
             <div class="detail-color" style="background-color:#eee"></div>
             <div class="detail-info">
               <b>Color Name</b>
@@ -105,7 +108,7 @@
           </div>
         </li>
         <li>
-          <div class="detail-box">
+          <div class="detail-box reset">
             <div class="detail-color" style="background-color:#eee"></div>
             <div class="detail-info">
               <b>Color Name</b>
