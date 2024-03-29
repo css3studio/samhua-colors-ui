@@ -110,7 +110,6 @@ a:hover, a:active {
 }
 
 #main-container{
-    padding:1rem;
 }
 /* title */
 .header-area{
@@ -255,7 +254,7 @@ a:hover, a:active {
 }
 .color-recent-area .titles h3{
   font-size:1.5rem;
-  
+
 }
 .color-recent-area .titles button{
   font-size:0.75rem;
@@ -390,8 +389,8 @@ a:hover, a:active {
   }
 
 
-  
-  
+
+
   .calc-body{
     gap:1rem;
     position:relative;
