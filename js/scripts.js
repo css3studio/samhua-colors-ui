@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var searchForm = document.getElementById("form-search");
     var categoryCheckboxes = document.querySelectorAll("#category-filter input[type='checkbox']");
     var allCheckbox = document.getElementById("all-checkbox");
+    var bestCheckbox = document.getElementById("best-checkbox");
     var selectedColors = []; // 최근 선택한 색상 정보를 저장할 배열
 
     fetch("color.json")
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then((obj) => {
         colors = obj;
-        console.log(colors)
+//        console.log(colors)
         renderColors();
     })
 
@@ -26,14 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
     function renderColors() {
       colorListDiv.innerHTML = '';
       var searchKeyword = searchInput.value.toLowerCase();
+      if (bestCheckbox.checked) {
+        colors.sort((a, b) => a.weight - b.weight);
+      }else{
+        colors.sort((a, b) => a.code - b.code);
+      }
       colors.forEach(function(color) {
         if (
-          color.eng.toLowerCase().includes(searchKeyword) ||
-          color.kor.toLowerCase().includes(searchKeyword) ||
-          color.code.toLowerCase().includes(searchKeyword) ||
-          color.page.toLowerCase().includes(searchKeyword) ||
-          color.hex.toLowerCase().includes(searchKeyword) ||
-          color.term2.toLowerCase().includes(searchKeyword)
+          (color.eng && color.eng.toLowerCase().includes(searchKeyword)) ||
+          (color.kor && color.kor.toLowerCase().includes(searchKeyword)) ||
+          (color.code && color.code.toLowerCase().includes(searchKeyword)) ||
+          (color.page && color.page.toLowerCase().includes(searchKeyword)) ||
+          (color.hex && color.hex.toLowerCase().includes(searchKeyword)) ||
+          (color.term2 && color.term2.toLowerCase().includes(searchKeyword)) ||
+          (color.term3 && color.term3.toLowerCase().includes(searchKeyword))
         ) {
           var showColor = false;
           if (allCheckbox.checked) {
@@ -41,7 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
           } else {
             categoryCheckboxes.forEach(function(checkbox) {
               if (checkbox.checked) {
-                if (color.term1 === checkbox.value || color.term2 === checkbox.value) {
+                if (
+                  (color.term1 && color.term1 === checkbox.value) || 
+                  (color.term2 && color.term2 === checkbox.value) || 
+                  (color.term3 && color.term3 === checkbox.value)
+                  ) {
                   showColor = true;
                 }
               }
