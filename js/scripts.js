@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
           (color.page && color.page.toLowerCase().includes(searchKeyword)) ||
           (color.hex && color.hex.toLowerCase().includes(searchKeyword)) ||
           (color.term2 && color.term2.toLowerCase().includes(searchKeyword)) ||
-          (color.term3 && color.term3.toLowerCase().includes(searchKeyword))
+          (color.term3 && color.term3.toLowerCase().includes(searchKeyword)) ||
+          (color.term4 && color.term4.toLowerCase().includes(searchKeyword))
         ) {
           var showColor = false;
           if (allCheckbox.checked) {
@@ -51,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (
                   (color.term1 && color.term1 === checkbox.value) || 
                   (color.term2 && color.term2 === checkbox.value) || 
-                  (color.term3 && color.term3 === checkbox.value)
+                  (color.term3 && color.term3 === checkbox.value) ||
+                  (color.term4 && color.term4 === checkbox.value)
                   ) {
                   showColor = true;
                 }
